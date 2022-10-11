@@ -29,7 +29,8 @@ export function WorkItem({ work }) {
 }
 
 const WorkItemStyled = styled.div`
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 350px;
   background-color: ${({ theme }) => theme.secondary.bg};
   position: relative;

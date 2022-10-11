@@ -68,6 +68,7 @@ const WorkItemContent = styled.div`
   background: linear-gradient(180deg, transparent, #15161a);
   backdrop-filter: blur(2.5px);
   padding: 0.9375rem;
+  border-radius: 0 0 10px 10px;
 
   width: 100%;
   max-height: 200px;

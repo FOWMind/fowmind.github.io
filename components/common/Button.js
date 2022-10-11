@@ -25,7 +25,7 @@ export const Button = styled.button`
   }
 
   &:hover {
-    box-shadow: ${({ featured }) => (featured ? "0px 0px 15px 0 #006FD6" : "")};
-    background-color: #006fd6;
+    box-shadow: ${({ featured }) => (featured ? "0px 0px 15px 0 #3490E4" : "")};
+    background-color: #3490e4;
   }
 `;

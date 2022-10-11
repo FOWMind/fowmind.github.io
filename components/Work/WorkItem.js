@@ -43,14 +43,14 @@ const WorkItemStyled = styled.div`
     animation: growAndDecrease 0.3s forwards;
 
     &::before {
-      border-color: #006fd6;
+      border-color: #3490e4;
     }
   }
 
   @keyframes growAndDecrease {
     0% {
       transform: scale(1);
-      box-shadow: 0px 0px 35px 10px #006fd6;
+      box-shadow: 0px 0px 35px 10px #3490e4;
     }
 
     50% {
@@ -59,7 +59,7 @@ const WorkItemStyled = styled.div`
 
     100% {
       transform: scale(1);
-      box-shadow: 0px 0px 15px 0 #006fd6;
+      box-shadow: 0px 0px 15px 0 #3490e4;
     }
   }
 `;

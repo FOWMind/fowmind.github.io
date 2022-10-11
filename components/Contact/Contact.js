@@ -4,8 +4,17 @@ export function Contact() {
   return (
     <Section id="contact">
       <Headline medium>Contacto</Headline>
-      <Button featured>LinkedIn</Button>
-      <Button featured>E-Mail</Button>
+      <Button
+        featured
+        as="a"
+        href="https://www.linkedin.com/in/fow"
+        target="_blank"
+      >
+        LinkedIn
+      </Button>
+      <Button featured as="a" href="mailto:alw1@hotmail.com">
+        E-Mail
+      </Button>
     </Section>
   );
 }

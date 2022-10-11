@@ -17,7 +17,7 @@ export function WorkItem() {
 const WorkItemStyled = styled.div`
   width: 350px;
   height: 350px;
-  background-color: #292b33;
+  background-color: ${({ theme }) => theme.secondary.bg};
   position: relative;
 
   &,
@@ -43,14 +43,14 @@ const WorkItemStyled = styled.div`
     animation: growAndDecrease 0.3s forwards;
 
     &::before {
-      border-color: #3490e4;
+      border-color: ${({ theme }) => theme.primary.bg};
     }
   }
 
   @keyframes growAndDecrease {
     0% {
       transform: scale(1);
-      box-shadow: 0px 0px 35px 10px #3490e4;
+      box-shadow: ${({ theme }) => theme.primary.boxShadowBig};
     }
 
     50% {
@@ -59,13 +59,13 @@ const WorkItemStyled = styled.div`
 
     100% {
       transform: scale(1);
-      box-shadow: 0px 0px 15px 0 #3490e4;
+      box-shadow: ${({ theme }) => theme.primary.boxShadow};
     }
   }
 `;
 
 const WorkItemContent = styled.div`
-  background: linear-gradient(180deg, transparent, #15161a);
+  background: ${({ theme }) => theme.workItemOverlay.bg};
   backdrop-filter: blur(2.5px);
   padding: 0.9375rem;
   border-radius: 0 0 10px 10px;

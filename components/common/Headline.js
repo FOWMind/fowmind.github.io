@@ -15,31 +15,37 @@ export function Headline({ children, featured, small, medium }) {
 export const HeadlineSmall = styled.h3`
   font-weight: 500;
   font-size: 1.25rem;
-  color: ${({ featured }) => (featured ? "#3490E4" : "#fff")};
-  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#3490E4" : "#fff")};
+  color: ${({ theme, featured }) =>
+    featured ? theme.featured.clr : theme.primary.clr};
+  text-shadow: ${({ theme, featured }) =>
+    featured ? theme.featured.textShadow : theme.primary.textShadow};
 `;
 
 export const HeadlineMedium = styled.h2`
   font-weight: 500;
   font-size: 1.875rem;
-  color: ${({ featured }) => (featured ? "#3490E4" : "#fff")};
-  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#3490E4" : "#fff")};
+  color: ${({ theme, featured }) =>
+    featured ? theme.featured.clr : theme.primary.clr};
+  text-shadow: ${({ theme, featured }) =>
+    featured ? theme.featured.textShadow : theme.primary.textShadow};
   margin-bottom: 1.25rem;
 `;
 
 export const HeadlineNormal = styled.h1`
   font-weight: 700;
   font-size: 3.75rem;
-  color: ${({ featured }) => (featured ? "#3490E4" : "#fff")};
-  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#3490E4" : "#fff")};
+  color: ${({ theme, featured }) =>
+    featured ? theme.featured.clr : theme.primary.clr};
+  text-shadow: ${({ theme, featured }) =>
+    featured ? theme.featured.textShadow : theme.primary.textShadow};
 
-  ${({ featured }) => {
+  ${({ theme, featured }) => {
     if (featured) {
       return `
-        background: linear-gradient(105deg, #006FD6 15%, #3490E4 55%, #75BDFF 100%);
+        background: ${theme.featured.bg};
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         background-clip: text;
+        -webkit-text-fill-color: transparent;
         text-fill-color: transparent;
       `;
     }

@@ -14,41 +14,6 @@ export default function Home() {
       <Work />
       <About />
       <Contact />
-
-      {/* Headlines */}
-      {/* <Headline>Headline</Headline>
-      <Headline featured>Headline featured</Headline>
-
-      <Headline medium>Headline medium</Headline>
-      <Headline medium featured>
-        Headline medium featured
-      </Headline>
-
-      <Headline small>Headline small</Headline>
-      <Headline small featured>
-        Headline small featured
-      </Headline> */}
-
-      {/* Paragraph */}
-      {/* <Paragraph>Paragraph</Paragraph>
-      <Paragraph featured>Paragraph featured</Paragraph> */}
-
-      {/* List */}
-      {/* <List>
-        <ListHeadline>List headline</ListHeadline>
-        <ListItem>Item 1</ListItem>
-        <ListItem>Item 2</ListItem>
-        <ListItem>Item 3</ListItem>
-      </List> */}
-
-      {/* <Button>Button</Button>
-      <Button featured>Button featured</Button>
-      <Button small>Button small</Button>
-      <Button featured small>
-        Button featured small
-      </Button> */}
-
-      {/* <WorkItem /> */}
     </div>
   );
 }

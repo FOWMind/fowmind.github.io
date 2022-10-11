@@ -54,7 +54,8 @@ const WorkItemStyled = styled.div`
     transition: border-color 0.1s;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     animation: growAndDecrease 0.3s forwards;
 
     &::before {

@@ -17,6 +17,11 @@ a {
   margin: 0;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 5px dotted #fff;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

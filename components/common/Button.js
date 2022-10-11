@@ -22,7 +22,8 @@ export const Button = styled.button`
     margin-right: 1.25rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     box-shadow: ${({ theme, featured }) =>
       featured ? theme.featured.boxShadow : ""};
     background-color: ${({ theme }) => theme.primary.bg};

@@ -1,14 +1,28 @@
 import styled from "styled-components";
 import { Headline, Paragraph, Button } from "../";
 
-export function WorkItem() {
+export function WorkItem({ work }) {
+  const { title, description, url } = work;
   return (
     <WorkItemStyled>
       <WorkItemContent>
-        <Headline small>Work title</Headline>
-        <WorkDescription>Work description</WorkDescription>
-        <WorkButton small>Probar demo</WorkButton>
-        <WorkButton small>Repositorio</WorkButton>
+        <Headline small>{title}</Headline>
+        <WorkDescription>{description}</WorkDescription>
+        {url && (
+          <>
+            {url.demo && (
+              <WorkButton small as="a" href={url.demo} target="_blank">
+                Probar demo
+              </WorkButton>
+            )}
+
+            {url.repository && (
+              <WorkButton small as="a" href={url.repository} target="_blank">
+                Repositorio
+              </WorkButton>
+            )}
+          </>
+        )}
       </WorkItemContent>
     </WorkItemStyled>
   );
@@ -19,6 +33,7 @@ const WorkItemStyled = styled.div`
   height: 350px;
   background-color: ${({ theme }) => theme.secondary.bg};
   position: relative;
+  margin: 0 2rem 2rem 0;
 
   &,
   &::before {

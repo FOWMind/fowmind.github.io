@@ -14,23 +14,24 @@ export function Headline({ children, featured, small, medium }) {
 
 export const HeadlineSmall = styled.h3`
   font-weight: 500;
-  color: ${({ featured }) => (featured ? "#006FD6" : "#fff")};
-  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#006FD6" : "#fff")};
   font-size: 1.25rem;
+  color: ${({ featured }) => (featured ? "#3490E4" : "#fff")};
+  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#3490E4" : "#fff")};
 `;
 
 export const HeadlineMedium = styled.h2`
   font-weight: 500;
-  color: ${({ featured }) => (featured ? "#006FD6" : "#fff")};
-  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#006FD6" : "#fff")};
   font-size: 1.875rem;
+  color: ${({ featured }) => (featured ? "#3490E4" : "#fff")};
+  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#3490E4" : "#fff")};
+  margin-bottom: 1.25rem;
 `;
 
 export const HeadlineNormal = styled.h1`
   font-weight: 700;
-  color: ${({ featured }) => (featured ? "#006FD6" : "#fff")};
-  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#006FD6" : "#fff")};
   font-size: 3.75rem;
+  color: ${({ featured }) => (featured ? "#3490E4" : "#fff")};
+  text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#3490E4" : "#fff")};
 
   ${({ featured }) => {
     if (featured) {

@@ -1,11 +1,11 @@
-import { Button, Headline } from "../common";
+import { Button, Headline, Section } from "../common";
 
 export function Contact() {
   return (
-    <section>
+    <Section>
       <Headline medium>Contacto</Headline>
       <Button featured>LinkedIn</Button>
       <Button featured>E-Mail</Button>
-    </section>
+    </Section>
   );
 }

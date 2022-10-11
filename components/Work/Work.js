@@ -1,11 +1,11 @@
-import { Headline } from "../common";
+import { Headline, Section } from "../common";
 import { WorkItem } from "./WorkItem";
 
 export function Work() {
   return (
-    <section>
+    <Section>
       <Headline medium>Trabajos</Headline>
       <WorkItem />
-    </section>
+    </Section>
   );
 }

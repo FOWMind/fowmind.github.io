@@ -14,23 +14,24 @@ export function Headline({ children, featured, small, medium }) {
 
 export const HeadlineSmall = styled.h3`
   font-weight: 500;
+  font-size: 1.25rem;
   color: ${({ featured }) => (featured ? "#006FD6" : "#fff")};
   text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#006FD6" : "#fff")};
-  font-size: 1.25rem;
 `;
 
 export const HeadlineMedium = styled.h2`
   font-weight: 500;
+  font-size: 1.875rem;
   color: ${({ featured }) => (featured ? "#006FD6" : "#fff")};
   text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#006FD6" : "#fff")};
-  font-size: 1.875rem;
+  margin-bottom: 1.25rem;
 `;
 
 export const HeadlineNormal = styled.h1`
   font-weight: 700;
+  font-size: 3.75rem;
   color: ${({ featured }) => (featured ? "#006FD6" : "#fff")};
   text-shadow: 0px 0px 5px ${({ featured }) => (featured ? "#006FD6" : "#fff")};
-  font-size: 3.75rem;
 
   ${({ featured }) => {
     if (featured) {

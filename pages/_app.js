@@ -26,4 +26,5 @@ export default MyApp;
 const Wrapper = styled.div`
   min-height: 100vh;
   background: linear-gradient(180deg, #1a1b20 0%, #0e0e11 100%);
+  padding: 2.5rem;
 `;

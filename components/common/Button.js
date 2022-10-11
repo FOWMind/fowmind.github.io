@@ -20,6 +20,10 @@ export const Button = styled.button`
       : ""};
   transition: box-shadow 0.1s, background-color 0.1s;
 
+  &:not(:last-of-type) {
+    margin-right: 1.25rem;
+  }
+
   &:hover {
     box-shadow: ${({ featured }) => (featured ? "0px 0px 15px 0 #006FD6" : "")};
     background-color: #006fd6;

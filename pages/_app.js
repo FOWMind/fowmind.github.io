@@ -1,19 +1,7 @@
 import "../styles/globals.css";
-// import WebFont from "webfontloader";
-// import { useEffect } from "react";
 import styled from "styled-components";
 
 function MyApp({ Component, pageProps }) {
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     WebFont.load({
-  //       google: {
-  //         families: ["Roboto Mono"],
-  //       },
-  //     });
-  //   }
-  // }, []);
-
   return (
     <Wrapper>
       <Component {...pageProps} />

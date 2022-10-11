@@ -1,13 +1,5 @@
 import Head from "next/head";
-import {
-  Headline,
-  List,
-  ListHeadline,
-  ListItem,
-  Paragraph,
-  Button,
-  WorkItem,
-} from "../components";
+import { About, Contact, Introduction, Work } from "../components";
 
 export default function Home() {
   return (
@@ -18,8 +10,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Introduction />
+      <Work />
+      <About />
+      <Contact />
+
       {/* Headlines */}
-      <Headline>Headline</Headline>
+      {/* <Headline>Headline</Headline>
       <Headline featured>Headline featured</Headline>
 
       <Headline medium>Headline medium</Headline>
@@ -30,28 +27,28 @@ export default function Home() {
       <Headline small>Headline small</Headline>
       <Headline small featured>
         Headline small featured
-      </Headline>
+      </Headline> */}
 
       {/* Paragraph */}
-      <Paragraph>Paragraph</Paragraph>
-      <Paragraph featured>Paragraph featured</Paragraph>
+      {/* <Paragraph>Paragraph</Paragraph>
+      <Paragraph featured>Paragraph featured</Paragraph> */}
 
       {/* List */}
-      <List>
+      {/* <List>
         <ListHeadline>List headline</ListHeadline>
         <ListItem>Item 1</ListItem>
         <ListItem>Item 2</ListItem>
         <ListItem>Item 3</ListItem>
-      </List>
+      </List> */}
 
-      <Button>Button</Button>
+      {/* <Button>Button</Button>
       <Button featured>Button featured</Button>
       <Button small>Button small</Button>
       <Button featured small>
         Button featured small
-      </Button>
+      </Button> */}
 
-      <WorkItem />
+      {/* <WorkItem /> */}
     </div>
   );
 }

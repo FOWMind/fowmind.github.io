@@ -13,8 +13,12 @@ export function Introduction() {
         Me gusta la informática y la naturaleza.
       </Paragraph>
       <IntroductionButtons>
-        <Button featured>Sobre mí</Button>
-        <Button>Ver contacto</Button>
+        <Button featured as="a" href="#about">
+          Sobre mí
+        </Button>
+        <Button as="a" href="#contact">
+          Ver contacto
+        </Button>
       </IntroductionButtons>
     </Section>
   );

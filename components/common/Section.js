@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export function Section({ children }) {
-  return <SectionStyled>{children}</SectionStyled>;
+export function Section({ children, id }) {
+  return <SectionStyled id={id}>{children}</SectionStyled>;
 }
 
 const SectionStyled = styled.section`

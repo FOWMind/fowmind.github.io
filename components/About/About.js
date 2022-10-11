@@ -2,7 +2,7 @@ import { Headline, Paragraph, Section } from "../common";
 
 export function About() {
   return (
-    <Section>
+    <Section id="about">
       <Headline medium>Sobre mí</Headline>
       <Paragraph>
         Desarrollador web especializado en frontend, con experiencia trabajando

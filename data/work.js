@@ -16,6 +16,13 @@ export const work = [
         "/images/work/countries/extra-3.png",
       ],
     },
+    technologies: [
+      "Next.js",
+      "React",
+      "Styled Components",
+      "Local Storage",
+      "Git",
+    ],
   },
   {
     id: 1,

@@ -1,27 +1,35 @@
 import styled from "styled-components";
 import { Headline, Paragraph, Button } from "../";
+import Link from "next/link";
 
 export function WorkItem({ work }) {
-  const { title, description, url } = work;
+  const { title, slug, description, url, images } = work;
   return (
     <WorkItemStyled>
+      {images && images.preview && (
+        <Link href={`/trabajo/${slug}`} passHref>
+          <a>
+            <WorkItemImage src={images.preview} alt="" />
+          </a>
+        </Link>
+      )}
       <WorkItemContent>
-        <Headline small>{title}</Headline>
-        <WorkDescription>{description}</WorkDescription>
-        {url && (
-          <>
-            {url.demo && (
-              <WorkButton small as="a" href={url.demo} target="_blank">
-                Probar demo
-              </WorkButton>
-            )}
+        <Link href={`/trabajo/${slug}`} passHref>
+          <a>
+            <Headline small>{title}</Headline>
+            <WorkDescription>{description}</WorkDescription>
+          </a>
+        </Link>
+        {url && url.demo && (
+          <WorkButton small as="a" href={url.demo} target="_blank">
+            Probar demo
+          </WorkButton>
+        )}
 
-            {url.repository && (
-              <WorkButton small as="a" href={url.repository} target="_blank">
-                Repositorio
-              </WorkButton>
-            )}
-          </>
+        {url && url.repository && (
+          <WorkButton small as="a" href={url.repository} target="_blank">
+            Repositorio
+          </WorkButton>
         )}
       </WorkItemContent>
     </WorkItemStyled>
@@ -35,6 +43,7 @@ const WorkItemStyled = styled.div`
   background-color: ${({ theme }) => theme.secondary.bg};
   position: relative;
   margin: 0 2rem 2rem 0;
+  overflow: hidden;
 
   &,
   &::before {
@@ -79,6 +88,14 @@ const WorkItemStyled = styled.div`
       box-shadow: ${({ theme }) => theme.primary.boxShadow};
     }
   }
+`;
+
+const WorkItemImage = styled.img`
+  width: 100%;
+  height: 99%; // 99% avoid problems with image border
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
 `;
 
 const WorkItemContent = styled.div`

@@ -13,6 +13,7 @@ export function Headline({ children, featured, small, medium }) {
 }
 
 export const HeadlineSmall = styled.h3`
+  max-width: 70rem;
   font-weight: 500;
   font-size: 1.25rem;
   color: ${({ theme, featured }) =>
@@ -22,6 +23,7 @@ export const HeadlineSmall = styled.h3`
 `;
 
 export const HeadlineMedium = styled.h2`
+  max-width: 70rem;
   font-weight: 500;
   font-size: 1.875rem;
   color: ${({ theme, featured }) =>
@@ -32,6 +34,7 @@ export const HeadlineMedium = styled.h2`
 `;
 
 export const HeadlineNormal = styled.h1`
+  max-width: 70rem;
   font-weight: 700;
   font-size: 3.75rem;
   color: ${({ theme, featured }) =>

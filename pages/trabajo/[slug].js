@@ -24,7 +24,7 @@ export default function SingleWork({ requestedWork }) {
         <Headline featured>{requestedWork.title}</Headline>
         <WorkDescription>{requestedWork.description}</WorkDescription>
 
-        {requestedWork.technologies && (
+        {requestedWork?.technologies && (
           <WorkTechnologies>
             <ListHeadline>Tecnologías utilizadas</ListHeadline>
 
@@ -47,7 +47,7 @@ export default function SingleWork({ requestedWork }) {
         )}
       </Section>
 
-      {requestedWork.images && (
+      {requestedWork?.images && (
         <Section>
           <Headline medium>Imágenes</Headline>
           <WorkImages>
@@ -56,7 +56,7 @@ export default function SingleWork({ requestedWork }) {
               alt="Imagen de previsualización del trabajo"
             />
 
-            {requestedWork.images.extra.length &&
+            {requestedWork.images.extra?.length &&
               requestedWork.images.extra.map((extraImage) => (
                 <WorkImage key={extraImage} src={extraImage} alt="" />
               ))}

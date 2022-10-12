@@ -102,6 +102,7 @@ const WorkItemContent = styled.div`
   background: ${({ theme }) => theme.workItemOverlay.bg};
   backdrop-filter: blur(2.5px);
   padding: 0.9375rem;
+  padding-top: 0;
   border-radius: 0 0 10px 10px;
 
   width: 100%;

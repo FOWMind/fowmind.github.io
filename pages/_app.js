@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import styled, { ThemeProvider } from "styled-components";
+import Head from "next/head";
 
 const theme = {
   wrapper: {
@@ -28,11 +29,21 @@ const theme = {
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Wrapper>
-        <Component {...pageProps} />
-      </Wrapper>
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Agustín Piriz</title>
+        <meta
+          name="description"
+          content="Sitio web personal de Agustín Piriz, desarrollador web."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <Wrapper>
+          <Component {...pageProps} />
+        </Wrapper>
+      </ThemeProvider>
+    </>
   );
 }
 

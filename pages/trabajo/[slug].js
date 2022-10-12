@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import {
   Button,
@@ -20,6 +21,9 @@ export default function SingleWork({ requestedWork }) {
 
   return (
     <>
+      <Head>
+        <title>Agustín Piriz - {requestedWork.title}</title>
+      </Head>
       <Section>
         <Headline featured>{requestedWork.title}</Headline>
         <WorkDescription>{requestedWork.description}</WorkDescription>

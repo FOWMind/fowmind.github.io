@@ -16,7 +16,7 @@ export default function SingleWork({ requestedWork }) {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <Headline small>Loading...</Headline>;
+    return <Headline small>Cargando...</Headline>;
   }
 
   return (

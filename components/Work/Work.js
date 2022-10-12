@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Headline, Section } from "../common";
 import { WorkItem } from "./WorkItem";
-import { work } from "../../data/work";
 
-export function Work() {
+export function Work({ work }) {
   return (
     <Section>
       <Headline medium>Trabajos</Headline>

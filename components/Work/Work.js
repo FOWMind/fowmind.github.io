@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Headline, Section } from "../common";
+import { HeadlineMedium, Section } from "../common";
 import { WorkItem } from "./WorkItem";
 
 export function Work({ work }) {
   return (
     <Section>
-      <Headline medium>Trabajos</Headline>
+      <HeadlineMedium>Trabajos</HeadlineMedium>
       {work.length && (
         <WorkContainer>
           {work.map((singleWork) => (

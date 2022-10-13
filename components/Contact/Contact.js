@@ -1,9 +1,9 @@
-import { Button, Headline, Section } from "../common";
+import { Button, HeadlineMedium, Section } from "../common";
 
 export function Contact() {
   return (
     <Section id="contact">
-      <Headline medium>Contacto</Headline>
+      <HeadlineMedium>Contacto</HeadlineMedium>
       <Button
         featured
         as="a"

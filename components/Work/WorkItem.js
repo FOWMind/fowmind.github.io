@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Headline, Paragraph, Button } from "../";
+import { HeadlineSmall, Paragraph, Button } from "../";
 import Link from "next/link";
 
 export function WorkItem({ work }) {
@@ -16,7 +16,7 @@ export function WorkItem({ work }) {
       <WorkItemContent>
         <Link href={`/trabajo/${slug}`} passHref>
           <a>
-            <Headline small>{title}</Headline>
+            <HeadlineSmall>{title}</HeadlineSmall>
             <WorkDescription>{description}</WorkDescription>
           </a>
         </Link>

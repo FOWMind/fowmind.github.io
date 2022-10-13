@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import {
   Button,
   Headline,
+  HeadlineSmall,
+  HeadlineMedium,
   List,
   ListHeadline,
   ListItem,
@@ -16,7 +18,7 @@ export default function SingleWork({ requestedWork }) {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <Headline small>Cargando...</Headline>;
+    return <HeadlineSmall>Cargando...</HeadlineSmall>;
   }
 
   return (
@@ -53,7 +55,7 @@ export default function SingleWork({ requestedWork }) {
 
       {requestedWork?.images && (
         <Section>
-          <Headline medium>Imágenes</Headline>
+          <HeadlineMedium>Imágenes</HeadlineMedium>
           <WorkImages>
             <WorkImage
               src={requestedWork.images.preview}

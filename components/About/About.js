@@ -1,9 +1,9 @@
-import { Headline, Paragraph, Section } from "../common";
+import { HeadlineMedium, Paragraph, Section } from "../common";
 
 export function About() {
   return (
     <Section id="about">
-      <Headline medium>Sobre mí</Headline>
+      <HeadlineMedium>Sobre mí</HeadlineMedium>
       <Paragraph>
         Desarrollador web especializado en frontend, con experiencia trabajando
         en equipo y gestionando proyectos.

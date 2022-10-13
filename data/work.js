@@ -74,7 +74,10 @@ export const work = [
     },
     images: {
       preview: "/images/work/skargun-portfolio/preview.png",
-      extra: ["/images/work/skargun-portfolio/extra-1.png"],
+      extra: [
+        "/images/work/skargun-portfolio/extra-1.png",
+        "/images/work/skargun-portfolio/extra-2.png",
+      ],
     },
   },
   {

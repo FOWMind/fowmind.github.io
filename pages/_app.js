@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import styled, { ThemeProvider } from "styled-components";
 import Head from "next/head";
+import GlobalStyle from "../styles/globalStyle";
 
 const theme = {
   wrapper: {
@@ -8,6 +9,11 @@ const theme = {
   },
   workItemOverlay: {
     bg: "linear-gradient(180deg, transparent, #15161a)",
+  },
+  scroll: {
+    trackBg: "#292b33",
+    handlerBg: "#0e0e11",
+    handlerBgHover: "#3490E4",
   },
   primary: {
     clr: "#fff",
@@ -39,6 +45,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Wrapper>
           <Component {...pageProps} />
         </Wrapper>

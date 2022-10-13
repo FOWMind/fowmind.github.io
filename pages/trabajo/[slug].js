@@ -57,14 +57,18 @@ export default function SingleWork({ requestedWork }) {
         <Section>
           <HeadlineMedium>Imágenes</HeadlineMedium>
           <WorkImages>
-            <WorkImage
-              src={requestedWork.images.preview}
-              alt="Imagen de previsualización del trabajo"
-            />
+            <WorkImageContainer>
+              <WorkImage
+                src={requestedWork.images.preview}
+                alt="Imagen de previsualización del trabajo"
+              />
+            </WorkImageContainer>
 
             {requestedWork.images.extra?.length &&
               requestedWork.images.extra.map((extraImage) => (
-                <WorkImage key={extraImage} src={extraImage} alt="" />
+                <WorkImageContainer key={extraImage}>
+                  <WorkImage src={extraImage} alt="" />
+                </WorkImageContainer>
               ))}
           </WorkImages>
         </Section>
@@ -118,12 +122,17 @@ const WorkImages = styled.div`
   }
 `;
 
-const WorkImage = styled.img`
+const WorkImageContainer = styled.div`
   width: 100%;
   max-width: 500px;
-  max-height: 500px;
+  height: 550px;
+  overflow: auto;
   border-radius: 10px;
   margin: 0 2rem 2rem 0;
+`;
+
+const WorkImage = styled.img`
+  width: 100%;
   object-fit: cover;
-  object-position: top;
+  border-radius: 10px;
 `;

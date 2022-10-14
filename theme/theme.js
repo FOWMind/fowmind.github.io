@@ -1,4 +1,11 @@
+const colors = {
+  primary: {
+    black: "#1F2026",
+  },
+};
+
 export const theme = {
+  darkBg: colors.primary.black,
   wrapper: {
     bg: "linear-gradient(180deg, #1a1b20 0%, #0e0e11 100%)",
   },

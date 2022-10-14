@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { HeadlineMedium, Paragraph } from "../common";
+import { Paragraph, Repositories } from "../";
 
 export function Menu() {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -20,7 +20,7 @@ export function Menu() {
             </MenuButton>
           </MenuButtonContainer>
 
-          <HeadlineMedium>Repositorios</HeadlineMedium>
+          <Repositories />
         </MenuStyled>
       ) : (
         <MenuButton onClick={toggleMenu} menuVisible={menuVisible}>

@@ -6,6 +6,9 @@ export function Menu({ repositories }) {
 
   const toggleMenu = () => {
     setMenuVisible((x) => !x);
+    const currentBodyOverflowY = document.body.style.overflowY;
+    document.body.style.overflowY =
+      currentBodyOverflowY === "hidden" ? "auto" : "hidden";
   };
 
   return (

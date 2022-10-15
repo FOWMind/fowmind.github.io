@@ -5,13 +5,13 @@ import { useRouter } from "next/router";
 import {
   Button,
   Headline,
-  HeadlineSmall,
   HeadlineMedium,
   List,
   ListHeadline,
   ListItem,
   Paragraph,
   Section,
+  Loading,
 } from "../../components";
 import { work } from "../../data/work";
 
@@ -19,7 +19,7 @@ export default function SingleWork({ requestedWork }) {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <HeadlineSmall>Cargando...</HeadlineSmall>;
+    return <Loading />;
   }
 
   return (

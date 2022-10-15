@@ -2,8 +2,8 @@ import { Octokit } from "@octokit/core";
 import {
   About,
   Contact,
-  HeadlineSmall,
   Introduction,
+  Loading,
   Menu,
   Work,
 } from "../components";
@@ -14,7 +14,7 @@ export default function Home({ repositories }) {
   const isMounted = useIsMounted();
 
   if (!isMounted) {
-    return <HeadlineSmall>Cargando...</HeadlineSmall>;
+    return <Loading />;
   }
 
   return (

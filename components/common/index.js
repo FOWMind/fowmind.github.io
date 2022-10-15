@@ -8,3 +8,4 @@ export * from "./FeaturedText";
 export * from "./TextSmall";
 export * from "./Section";
 export * from "./Divisor";
+export * from "./Loading";

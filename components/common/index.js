@@ -5,4 +5,6 @@ export * from "./Paragraph";
 export * from "./List";
 export * from "./Button";
 export * from "./FeaturedText";
+export * from "./TextSmall";
 export * from "./Section";
+export * from "./Divisor";

@@ -6,6 +6,7 @@ const colors = {
 
 export const theme = {
   darkBg: colors.primary.black,
+  divisorBg: "rgba(255,255,255,.15)",
   wrapper: {
     bg: "linear-gradient(180deg, #1a1b20 0%, #0e0e11 100%)",
   },
@@ -25,7 +26,9 @@ export const theme = {
     boxShadowBig: "0px 0px 35px 10px #3490e4",
   },
   secondary: {
+    clr: "#B8B8B8",
     bg: "#292b33",
+    textShadow: "0 0 5px #B8B8B8",
   },
   featured: {
     clr: "#3490E4",

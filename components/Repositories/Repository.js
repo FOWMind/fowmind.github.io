@@ -1,22 +1,38 @@
 import styled from "styled-components";
-import { HeadlineSmall, Paragraph } from "../common";
-import { ListItemInline } from "../common/ListItemInline";
+import {
+  HeadlineSmall,
+  Paragraph,
+  Divisor,
+  TextSmall,
+  FeaturedText,
+} from "../";
 
 export function Repository() {
   return (
     <RepositoryStyled>
+      <TextSmall>@Repository Owner</TextSmall>
       <RepositoryName featured>Repository name</RepositoryName>
       <RepositoryDescription>Repository description</RepositoryDescription>
 
-      <RepositoryLanguages>
-        <RepositoryLanguage>JavaScript</RepositoryLanguage>
-        <RepositoryLanguage>CSS</RepositoryLanguage>
-      </RepositoryLanguages>
+      <Divisor />
 
-      <RepositoryTags>
-        <RepositoryTag>#react</RepositoryTag>
-        <RepositoryTag>#nextjs</RepositoryTag>
-      </RepositoryTags>
+      <RepositoryMetaInfo>
+        <RepositoryMetaInfoItem>
+          Sitio web:{" "}
+          <RepositoryLink href="https://demo.com">
+            <FeaturedText>https://demo.com</FeaturedText>
+          </RepositoryLink>
+        </RepositoryMetaInfoItem>
+        <RepositoryMetaInfoItem>Es Fork: Sí</RepositoryMetaInfoItem>
+        <RepositoryMetaInfoItem>Creado: 13 Oct, 2022</RepositoryMetaInfoItem>
+        <RepositoryMetaInfoItem>
+          Último Push: 15 Oct, 2022
+        </RepositoryMetaInfoItem>
+        <RepositoryMetaInfoItem>
+          Lenguaje más usado: JavaScript
+        </RepositoryMetaInfoItem>
+        <RepositoryMetaInfoItem>Tópicos: react, nextjs</RepositoryMetaInfoItem>
+      </RepositoryMetaInfo>
     </RepositoryStyled>
   );
 }
@@ -28,34 +44,25 @@ const RepositoryStyled = styled.li`
 `;
 
 const RepositoryName = styled(HeadlineSmall)`
-  margin-bottom: 0.625rem;
+  margin: 0.625rem 0;
 `;
 
 const RepositoryDescription = styled(Paragraph)`
   margin-bottom: 0.625rem;
 `;
 
-const RepositoryLanguages = styled.ul`
-  margin-bottom: 0.625rem;
+const RepositoryMetaInfo = styled.div``;
+
+const RepositoryMetaInfoItem = styled(TextSmall)`
+  margin-bottom: 0.3125rem;
 `;
 
-const RepositoryLanguage = styled(ListItemInline)`
-  &:not(:last-of-type) {
-    margin: 0 0.625rem 0.625rem 0;
-  }
-`;
-
-const RepositoryTags = styled.ul`
-  list-style-type: none;
-`;
-
-const RepositoryTag = styled(Paragraph).attrs({
-  as: "li",
-})`
-  display: inline-block;
-
-  &:not(:last-of-type)::after {
-    content: "-";
-    margin: 0 0.25rem;
+const RepositoryLink = styled.a.attrs((props) => ({
+  ...props,
+  rel: "noreferrer",
+  target: "_blank",
+}))`
+  &:hover {
+    text-decoration: underline;
   }
 `;

@@ -1,11 +1,17 @@
 import styled from "styled-components";
-import { HeadlineMedium, Repository } from "../";
+import { HeadlineMedium, Repository, Paragraph } from "../";
 
-export function Repositories() {
+export function Repositories({ repositories }) {
   return (
     <RepositoriesStyled>
       <HeadlineMedium>Repositorios</HeadlineMedium>
-      <Repository />
+      {repositories.length > 0 ? (
+        repositories.map((repository) => (
+          <Repository key={repository.id} repository={repository} />
+        ))
+      ) : (
+        <Paragraph>No se encontraron repositorios.</Paragraph>
+      )}
     </RepositoriesStyled>
   );
 }

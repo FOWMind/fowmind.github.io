@@ -1,5 +1,4 @@
 import { Octokit } from "@octokit/core";
-import { useEffect } from "react";
 import {
   About,
   Contact,
@@ -11,33 +10,8 @@ import {
 import { work } from "../data/work";
 import { useIsMounted } from "../hooks";
 
-export default function Home({ work }) {
+export default function Home({ repositories }) {
   const isMounted = useIsMounted();
-
-  useEffect(() => {
-    // const octokit = new Octokit({
-    //   auth: process.env.OCTOKIT_AUTH,
-    // });
-    // octokit
-    //   .request("GET /users/{username}/repos", {
-    //     username: "FOWMind",
-    //   })
-    //   .then((repos) => console.log(repos.data))
-    //   .catch((err) => err);
-    /*
-        Repository info:
-        id: number,
-        language: string,
-        name: string,
-        description: string,
-        fork: boolean,
-        topics: string[],
-        created_at: string | date,
-        pushed_at: string | date,
-        owner: object { login, id, node_id, avatar_url }
-        url: string,
-      */
-  }, []);
 
   if (!isMounted) {
     return <HeadlineSmall>Cargando...</HeadlineSmall>;
@@ -45,7 +19,7 @@ export default function Home({ work }) {
 
   return (
     <div>
-      <Menu />
+      <Menu repositories={repositories} />
       <Introduction />
       <Work work={work} />
       <About />
@@ -54,10 +28,18 @@ export default function Home({ work }) {
   );
 }
 
-export const getStaticProps = () => {
+export const getStaticProps = async () => {
+  const octokit = new Octokit({
+    auth: process.env.OCTOKIT_AUTH,
+  });
+
+  const repositories = await octokit.request("GET /users/{username}/repos", {
+    username: process.env.OCTOKIT_REPOS_USERNAME,
+  });
+
   return {
     props: {
-      work,
+      repositories: repositories.data || [],
     },
   };
 };

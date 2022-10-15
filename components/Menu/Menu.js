@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { Paragraph, Repositories } from "../";
 
-export function Menu() {
+export function Menu({ repositories }) {
   const [menuVisible, setMenuVisible] = useState(false);
 
   const toggleMenu = () => {
@@ -20,7 +20,7 @@ export function Menu() {
             </MenuButton>
           </MenuButtonContainer>
 
-          <Repositories />
+          <Repositories repositories={repositories} />
         </MenuStyled>
       ) : (
         <MenuButton onClick={toggleMenu} menuVisible={menuVisible}>

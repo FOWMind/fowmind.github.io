@@ -22,6 +22,7 @@ export const work = [
       "Styled Components",
       "Local Storage",
       "Git",
+      "API",
     ],
   },
   {
@@ -36,6 +37,7 @@ export const work = [
     images: {
       preview: "/images/work/advice-generator/preview.png",
     },
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "Advice Slip API"],
   },
   {
     id: 2,
@@ -49,6 +51,7 @@ export const work = [
     images: {
       preview: "/images/work/password-generator/preview.png",
     },
+    technologies: ["React", "Styled Components", "Browser Clipboard API"],
   },
   {
     id: 3,
@@ -62,6 +65,7 @@ export const work = [
         "/images/work/stream-master-teemo/extra-2.png",
       ],
     },
+    technologies: ["Figma"],
   },
   {
     id: 4,
@@ -79,6 +83,18 @@ export const work = [
         "/images/work/skargun-portfolio/extra-2.png",
       ],
     },
+    technologies: [
+      "Next.js",
+      "Typed.js",
+      "Express",
+      "Mongoose",
+      "JWT",
+      "Cloudinary API",
+      "Styled Components",
+      "Local Storage",
+      "Git",
+      "Figma",
+    ],
   },
   {
     id: 5,
@@ -94,6 +110,7 @@ export const work = [
       preview: "/images/work/rock-paper-scissors-game/preview.png",
       extra: ["/images/work/rock-paper-scissors-game/extra-1.png"],
     },
+    technologies: ["HTML", "CSS", "JavaScript", "Local Storage"],
   },
   {
     id: 6,
@@ -107,5 +124,6 @@ export const work = [
     images: {
       preview: "/images/work/discord-vote/preview.png",
     },
+    technologies: ["React", "Styled Components", "CSS"],
   },
 ];

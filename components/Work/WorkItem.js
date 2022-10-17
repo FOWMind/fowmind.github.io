@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { HeadlineSmall, Paragraph, Button } from "../";
+import { HeadlineSmall, TextSmall, Paragraph, Button } from "../";
 import Link from "next/link";
 
 export function WorkItem({ work }) {
-  const { title, slug, description, url, images } = work;
+  const { title, slug, role, description, url, images } = work;
   return (
     <WorkItemStyled>
       {images && images.preview && (
@@ -17,6 +17,7 @@ export function WorkItem({ work }) {
         <Link href={`/trabajo/${slug}`} passHref>
           <a>
             <HeadlineSmall>{title}</HeadlineSmall>
+            {role && <TextSmall>Rol: {role}</TextSmall>}
             <WorkDescription>{description}</WorkDescription>
           </a>
         </Link>

@@ -116,6 +116,7 @@ export const work = [
     id: 6,
     title: "DiscordVote",
     slug: "discord-vote",
+    role: "Colaborador",
     description:
       "Una plataforma de votación para bots y servidores de Discord.",
     url: {

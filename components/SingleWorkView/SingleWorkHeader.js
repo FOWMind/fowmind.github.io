@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { ButtonBack, Headline, Section, Paragraph } from "../";
+import { ButtonBack, Headline, Paragraph, Section } from "../";
 import { SingleWorkTechnologies, SingleWorkButtons } from "./";
 
 export function SingleWorkHeader({ requestedWork }) {
@@ -12,6 +12,7 @@ export function SingleWorkHeader({ requestedWork }) {
       <Headline featured>{requestedWork.title}</Headline>
       <WorkDescription>{requestedWork.description}</WorkDescription>
 
+      {requestedWork?.role && <WorkRole>Rol: {requestedWork.role}</WorkRole>}
       {requestedWork?.technologies && (
         <SingleWorkTechnologies technologies={requestedWork.technologies} />
       )}
@@ -20,6 +21,10 @@ export function SingleWorkHeader({ requestedWork }) {
     </Section>
   );
 }
+
+const WorkRole = styled(Paragraph)`
+  margin-bottom: 1.25rem;
+`;
 
 const WorkDescription = styled(Paragraph)`
   margin-bottom: 1.25rem;

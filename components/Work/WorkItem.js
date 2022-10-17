@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { HeadlineSmall, TextSmall, Paragraph, Button } from "../";
 import Link from "next/link";
+import { WorkItemContent } from "./WorkItemContent";
 
 export function WorkItem({ work }) {
-  const { title, slug, role, description, url, images } = work;
+  const { slug, images } = work;
   return (
     <WorkItemStyled>
       {images && images.preview && (
@@ -13,26 +14,8 @@ export function WorkItem({ work }) {
           </a>
         </Link>
       )}
-      <WorkItemContent>
-        <Link href={`/trabajo/${slug}`} passHref>
-          <a>
-            <HeadlineSmall>{title}</HeadlineSmall>
-            {role && <TextSmall>Rol: {role}</TextSmall>}
-            <WorkDescription>{description}</WorkDescription>
-          </a>
-        </Link>
-        {url && url.demo && (
-          <WorkButton small as="a" href={url.demo} target="_blank">
-            Probar demo
-          </WorkButton>
-        )}
 
-        {url && url.repository && (
-          <WorkButton small as="a" href={url.repository} target="_blank">
-            Repositorio
-          </WorkButton>
-        )}
-      </WorkItemContent>
+      <WorkItemContent {...work} />
     </WorkItemStyled>
   );
 }
@@ -97,30 +80,4 @@ const WorkItemImage = styled.img`
   object-fit: cover;
   object-position: top center;
   border-radius: 10px;
-`;
-
-const WorkItemContent = styled.div`
-  background: ${({ theme }) => theme.workItemOverlay.bg};
-  backdrop-filter: blur(2.5px);
-  padding: 0.9375rem;
-  padding-top: 0;
-  border-radius: 0 0 10px 10px;
-
-  width: 100%;
-  max-height: 200px;
-  overflow-y: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-`;
-
-const WorkDescription = styled(Paragraph)`
-  margin: 0.5rem 0;
-`;
-
-const WorkButton = styled(Button)`
-  &:not(:last-of-type) {
-    margin-right: 0.5rem;
-  }
 `;

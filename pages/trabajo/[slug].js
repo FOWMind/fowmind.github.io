@@ -1,18 +1,6 @@
-import styled from "styled-components";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import {
-  Button,
-  Headline,
-  HeadlineMedium,
-  List,
-  ListHeadline,
-  ListItem,
-  Paragraph,
-  Section,
-  Loading,
-} from "../../components";
+import { Loading, SingleWorkView } from "../../components";
 import { work } from "../../data/work";
 
 export default function SingleWork({ requestedWork }) {
@@ -27,59 +15,7 @@ export default function SingleWork({ requestedWork }) {
       <Head>
         <title>Agustín Piriz - {requestedWork.title}</title>
       </Head>
-      <Section>
-        <Link href="/" passHref>
-          <BackToWorkButton as="a">
-            <BackToWorkIcon src="/images/icon/arrow-left.svg" alt="" />
-            Volver a trabajos
-          </BackToWorkButton>
-        </Link>
-        <Headline featured>{requestedWork.title}</Headline>
-        <WorkDescription>{requestedWork.description}</WorkDescription>
-
-        {requestedWork?.technologies && (
-          <WorkTechnologies>
-            <ListHeadline>Tecnologías utilizadas</ListHeadline>
-
-            {requestedWork.technologies.map((technology) => (
-              <ListItem key={technology}>{technology}</ListItem>
-            ))}
-          </WorkTechnologies>
-        )}
-
-        {requestedWork.url && requestedWork.url.demo && (
-          <Button featured as="a" href={requestedWork.url.demo} target="_blank">
-            Probar demo
-          </Button>
-        )}
-
-        {requestedWork.url && requestedWork.url.repository && (
-          <Button as="a" href={requestedWork.url.repository} target="_blank">
-            Ver repositorio
-          </Button>
-        )}
-      </Section>
-
-      {requestedWork?.images && (
-        <Section>
-          <HeadlineMedium>Imágenes</HeadlineMedium>
-          <WorkImages>
-            <WorkImageContainer>
-              <WorkImage
-                src={requestedWork.images.preview}
-                alt="Imagen de previsualización del trabajo"
-              />
-            </WorkImageContainer>
-
-            {requestedWork.images.extra?.length &&
-              requestedWork.images.extra.map((extraImage) => (
-                <WorkImageContainer key={extraImage}>
-                  <WorkImage src={extraImage} alt="" />
-                </WorkImageContainer>
-              ))}
-          </WorkImages>
-        </Section>
-      )}
+      <SingleWorkView requestedWork={requestedWork} />
     </>
   );
 }
@@ -112,48 +48,3 @@ export const getStaticProps = ({ params }) => {
     };
   }
 };
-
-const BackToWorkButton = styled(Button)`
-  margin-bottom: 1.25rem;
-
-  &:hover > img {
-    transform: translateX(-5px);
-  }
-`;
-
-const BackToWorkIcon = styled.img`
-  width: 15px;
-  margin: 0 0.5rem;
-  transition: transform 0.1s;
-`;
-
-const WorkDescription = styled(Paragraph)`
-  margin-bottom: 1.25rem;
-`;
-
-const WorkTechnologies = styled(List)`
-  margin-bottom: 1.25rem;
-`;
-
-const WorkImages = styled.div`
-  @media screen and (min-width: 1000px) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-`;
-
-const WorkImageContainer = styled.div`
-  width: 100%;
-  max-width: 500px;
-  height: 550px;
-  overflow: auto;
-  border-radius: 10px;
-  margin: 0 2rem 2rem 0;
-`;
-
-const WorkImage = styled.img`
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-`;

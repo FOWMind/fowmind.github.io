@@ -6,6 +6,7 @@ const colors = {
 
 export const theme = {
   darkBg: colors.primary.black,
+  overlayBg: "rgba(0,0,0,.75)",
   divisorBg: "rgba(255,255,255,.15)",
   wrapper: {
     bg: "linear-gradient(180deg, #1a1b20 0%, #0e0e11 100%)",

@@ -4,6 +4,7 @@ export * from "./HeadlineMedium";
 export * from "./Paragraph";
 export * from "./List";
 export * from "./Button";
+export * from "./ButtonBack";
 export * from "./FeaturedText";
 export * from "./TextSmall";
 export * from "./Section";

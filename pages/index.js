@@ -28,7 +28,7 @@ export default function Home({ repositories }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const octokit = new Octokit({
     auth: process.env.OCTOKIT_AUTH,
   });

@@ -1,6 +1,34 @@
 export const work = [
   {
     id: 0,
+    title: "4 en raya",
+    slug: "4-en-raya",
+    description: "El clásico juego de cuatro en raya hecho en digital.",
+    url: {
+      demo: "https://connect-four-game-nu.vercel.app",
+      repository: "https://github.com/FOWMind/connect-four-game",
+    },
+    images: {
+      preview: "/images/work/connect-four-game/preview.png",
+      extra: [
+        "/images/work/connect-four-game/extra-1.png",
+        "/images/work/connect-four-game/extra-2.png",
+        "/images/work/connect-four-game/extra-3.png",
+      ],
+    },
+    technologies: [
+      "JavaScript",
+      "SCSS",
+      "HTML",
+      "Webpack",
+      "Babel",
+      "Figma",
+      "Git",
+      "POO",
+    ],
+  },
+  {
+    id: 1,
     title: "Lista de países",
     slug: "lista-de-paises",
     description: "Una lista de países obtenidos con la API Rest Countries.",
@@ -26,7 +54,7 @@ export const work = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     title: "Generador de consejos",
     slug: "generador-de-consejos",
     description: "Genera consejos a través de Advice Slip JSON API.",
@@ -40,7 +68,7 @@ export const work = [
     technologies: ["HTML", "CSS", "JavaScript", "Git", "Advice Slip API"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Generador de contraseñas",
     slug: "generador-de-contraseñas",
     description: "Un generador de contraseñas aleatorias personalizable.",
@@ -54,7 +82,7 @@ export const work = [
     technologies: ["React", "Styled Components", "Browser Clipboard API"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Escenas para transmisión TLG Master Teemo",
     slug: "stream-master-teemo",
     description: "Algunos diseños de escenas para utilizar en un directo.",
@@ -68,7 +96,7 @@ export const work = [
     technologies: ["Figma"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Portafolio Skargun",
     slug: "portafolio-skargun",
     description:
@@ -97,7 +125,7 @@ export const work = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Juego de piedra papel o tijera",
     slug: "juego-piedra-papel-tijera",
     description:
@@ -113,7 +141,7 @@ export const work = [
     technologies: ["HTML", "CSS", "JavaScript", "Local Storage"],
   },
   {
-    id: 6,
+    id: 7,
     title: "DiscordVote",
     slug: "discord-vote",
     role: "Colaborador",
@@ -127,4 +155,4 @@ export const work = [
     },
     technologies: ["React", "Styled Components", "CSS"],
   },
-];
+]

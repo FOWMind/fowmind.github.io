@@ -1,9 +1,9 @@
 export const work = [
   {
     id: 0,
-    title: 'Portfolio desarrollador',
-    slug: 'portfolio-desarrollador',
-    description: 'Un simple portfolio para desarrollador hecho con ReactJS.',
+    title: 'Portafolio desarrollador',
+    slug: 'portafolio-desarrollador',
+    description: 'Un simple portafolio para desarrollador hecho con ReactJS.',
     url: {
       demo: 'https://developer-portfolio-peach.vercel.app',
       repository: 'https://github.com/FOWMind/developer-portfolio',

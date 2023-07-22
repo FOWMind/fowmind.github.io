@@ -1,4 +1,4 @@
-import { Button } from "../common";
+import { Button } from '../common'
 
 export function SingleWorkButtons({ url }) {
   return (
@@ -15,5 +15,5 @@ export function SingleWorkButtons({ url }) {
         </Button>
       )}
     </>
-  );
+  )
 }

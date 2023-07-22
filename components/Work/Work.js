@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { HeadlineMedium, Section } from "../common";
-import { WorkItem } from "./WorkItem";
+import styled from 'styled-components'
+import { HeadlineMedium, Section } from '../common'
+import { WorkItem } from './WorkItem'
 
 export function Work({ work }) {
   return (
@@ -14,7 +14,7 @@ export function Work({ work }) {
         </WorkContainer>
       )}
     </Section>
-  );
+  )
 }
 
 const WorkContainer = styled.div`
@@ -25,4 +25,4 @@ const WorkContainer = styled.div`
     justify-content: flex-start;
     flex-wrap: wrap;
   }
-`;
+`

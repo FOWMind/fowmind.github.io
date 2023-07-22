@@ -1,3 +1,3 @@
-export * from "./Repositories";
-export * from "./Repository";
-export * from "./RepositoryMetaInfo";
+export * from './Repositories'
+export * from './Repository'
+export * from './RepositoryMetaInfo'

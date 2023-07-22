@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { HeadlineSmall, TextSmall, Paragraph, Button } from "../";
-import Link from "next/link";
-import { WorkItemContent } from "./WorkItemContent";
+import styled from 'styled-components'
+import { HeadlineSmall, TextSmall, Paragraph, Button } from '../'
+import Link from 'next/link'
+import { WorkItemContent } from './WorkItemContent'
 
 export function WorkItem({ work }) {
-  const { slug, images } = work;
+  const { slug, images } = work
   return (
     <WorkItemStyled>
       {images && images.preview && (
@@ -17,7 +17,7 @@ export function WorkItem({ work }) {
 
       <WorkItemContent {...work} />
     </WorkItemStyled>
-  );
+  )
 }
 
 const WorkItemStyled = styled.div`
@@ -35,7 +35,7 @@ const WorkItemStyled = styled.div`
   }
 
   &::before {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     position: absolute;
@@ -72,7 +72,7 @@ const WorkItemStyled = styled.div`
       box-shadow: ${({ theme }) => theme.primary.boxShadow};
     }
   }
-`;
+`
 
 const WorkItemImage = styled.img`
   width: 100%;
@@ -80,4 +80,4 @@ const WorkItemImage = styled.img`
   object-fit: cover;
   object-position: top center;
   border-radius: 10px;
-`;
+`

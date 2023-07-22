@@ -1,20 +1,5 @@
 export const work = [
   {
-    id: 0,
-    title: 'Portafolio desarrollador',
-    slug: 'portafolio-desarrollador',
-    description: 'Un simple portafolio para desarrollador hecho con ReactJS.',
-    url: {
-      demo: 'https://developer-portfolio-peach.vercel.app',
-      repository: 'https://github.com/FOWMind/developer-portfolio',
-    },
-    images: {
-      preview: '/images/work/developer-portfolio/preview.png',
-      extra: ['/images/work/developer-portfolio/extra-1.png'],
-    },
-    technologies: ['TypeScript', 'ViteJS', 'ReactJS', 'Styled Components', 'HTML', 'Figma', 'Git'],
-  },
-  {
     id: 1,
     title: '4 en raya',
     slug: '4-en-raya',
@@ -79,42 +64,6 @@ export const work = [
       preview: '/images/work/password-generator/preview.png',
     },
     technologies: ['React', 'Styled Components', 'Browser Clipboard API'],
-  },
-  {
-    id: 5,
-    title: 'Escenas para transmisión TLG Master Teemo',
-    slug: 'stream-master-teemo',
-    description: 'Algunos diseños de escenas para utilizar en un directo.',
-    images: {
-      preview: '/images/work/stream-master-teemo/preview.png',
-      extra: ['/images/work/stream-master-teemo/extra-1.png', '/images/work/stream-master-teemo/extra-2.png'],
-    },
-    technologies: ['Figma'],
-  },
-  {
-    id: 6,
-    title: 'Portafolio Skargun',
-    slug: 'portafolio-skargun',
-    description: 'Sitio web personal para artista. Cuenta con gestor de contenido personalizado.',
-    url: {
-      demo: 'https://skargun.vercel.app',
-    },
-    images: {
-      preview: '/images/work/skargun-portfolio/preview.png',
-      extra: ['/images/work/skargun-portfolio/extra-1.png', '/images/work/skargun-portfolio/extra-2.png'],
-    },
-    technologies: [
-      'Next.js',
-      'Typed.js',
-      'Express',
-      'Mongoose',
-      'JWT',
-      'Cloudinary API',
-      'Styled Components',
-      'Local Storage',
-      'Git',
-      'Figma',
-    ],
   },
   {
     id: 7,

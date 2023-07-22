@@ -1,27 +1,14 @@
-import styled from "styled-components";
-import { HeadlineSmall, Paragraph, Divisor, TextSmall } from "../";
-import { RepositoryMetaInfo } from "./";
+import styled from 'styled-components'
+import { HeadlineSmall, Paragraph, Divisor, TextSmall } from '../'
+import { RepositoryMetaInfo } from './'
 
 export function Repository({ repository }) {
-  const {
-    owner,
-    name,
-    description,
-    homepage,
-    fork,
-    created_at,
-    pushed_at,
-    language,
-    topics,
-    html_url,
-  } = repository;
+  const { owner, name, description, homepage, fork, created_at, pushed_at, language, topics, html_url } = repository
   return (
     <RepositoryStyled>
       <TextSmall>@{owner.login}</TextSmall>
       <RepositoryName featured>{name}</RepositoryName>
-      {description && (
-        <RepositoryDescription>{description}</RepositoryDescription>
-      )}
+      {description && <RepositoryDescription>{description}</RepositoryDescription>}
 
       <Divisor />
 
@@ -35,7 +22,7 @@ export function Repository({ repository }) {
         html_url={html_url}
       />
     </RepositoryStyled>
-  );
+  )
 }
 
 const RepositoryStyled = styled.li`
@@ -46,12 +33,12 @@ const RepositoryStyled = styled.li`
   &:not(:last-of-type) {
     margin-bottom: 1.25rem;
   }
-`;
+`
 
 const RepositoryName = styled(HeadlineSmall)`
   margin: 0.625rem 0;
-`;
+`
 
 const RepositoryDescription = styled(Paragraph)`
   margin-bottom: 0.625rem;
-`;
+`

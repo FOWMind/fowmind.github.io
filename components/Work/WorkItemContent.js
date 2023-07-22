@@ -1,6 +1,6 @@
-import Link from "next/link";
-import styled from "styled-components";
-import { HeadlineSmall, TextSmall, Paragraph, Button } from "../common";
+import Link from 'next/link'
+import styled from 'styled-components'
+import { HeadlineSmall, TextSmall, Paragraph, Button } from '../common'
 
 export function WorkItemContent({ title, slug, role, description, url }) {
   return (
@@ -24,7 +24,7 @@ export function WorkItemContent({ title, slug, role, description, url }) {
         </WorkButton>
       )}
     </WorkItemContentStyled>
-  );
+  )
 }
 
 const WorkItemContentStyled = styled.div`
@@ -41,14 +41,14 @@ const WorkItemContentStyled = styled.div`
   bottom: 0;
   left: 0;
   z-index: 1;
-`;
+`
 
 const WorkDescription = styled(Paragraph)`
   margin: 0.5rem 0;
-`;
+`
 
 const WorkButton = styled(Button)`
   &:not(:last-of-type) {
     margin-right: 0.5rem;
   }
-`;
+`

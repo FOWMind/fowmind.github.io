@@ -1,5 +1,5 @@
-import { HeadlineSmall } from "./";
+import { HeadlineSmall } from './'
 
 export function Loading() {
-  return <HeadlineSmall>Cargando...</HeadlineSmall>;
+  return <HeadlineSmall>Cargando...</HeadlineSmall>
 }

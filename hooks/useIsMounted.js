@@ -1,17 +1,17 @@
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 
 export function useIsMounted() {
-  const router = useRouter();
-  const [loaded, setLoaded] = useState(false);
+  const router = useRouter()
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     if (router.isReady) {
-      setLoaded(true);
+      setLoaded(true)
     } else {
-      setLoaded(false);
+      setLoaded(false)
     }
-  }, [router.isReady]);
+  }, [router.isReady])
 
-  return loaded;
+  return loaded
 }

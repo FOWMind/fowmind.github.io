@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ListItemInline = styled.li`
   list-style-type: none;
@@ -9,4 +9,5 @@ export const ListItemInline = styled.li`
   color: ${({ theme }) => theme.primary.clr};
   font-size: 0.9375rem;
   font-weight: 500;
-`;
+  margin: 0 0.5rem 0.5rem 0;
+`

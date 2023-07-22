@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Paragraph, Repositories } from "../";
+import styled from 'styled-components'
+import { Paragraph, Repositories } from '../'
 
 export function MenuView({ menuVisible, toggleMenu, repositories }) {
   return (
@@ -18,22 +18,22 @@ export function MenuView({ menuVisible, toggleMenu, repositories }) {
       ) : (
         <MenuButton onClick={toggleMenu} menuVisible={menuVisible}>
           <MenuIcon src="/images/icon/menu-icon.svg" alt="" />
-          <MenuText>Menú</MenuText>
+          <MenuText>Repositorios</MenuText>
         </MenuButton>
       )}
     </>
-  );
+  )
 }
 
 const MenuText = styled(Paragraph)`
   margin-left: 0.625rem;
-`;
+`
 
 const MenuButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-`;
+`
 
 const MenuButton = styled.button`
   cursor: pointer;
@@ -45,19 +45,19 @@ const MenuButton = styled.button`
 
   padding: 0.5rem 0;
   background: none;
-  position: ${({ menuVisible }) => (menuVisible ? "relative" : "absolute")};
-  top: ${({ menuVisible }) => !menuVisible && "2.5rem"};
-  right: ${({ menuVisible }) => (menuVisible ? "0" : "2.5rem")};
-  z-index: ${({ menuVisible }) => !menuVisible && "200"};
+  position: ${({ menuVisible }) => (menuVisible ? 'relative' : 'absolute')};
+  top: ${({ menuVisible }) => !menuVisible && '2.5rem'};
+  right: ${({ menuVisible }) => (menuVisible ? '0' : '2.5rem')};
+  z-index: ${({ menuVisible }) => !menuVisible && '200'};
 
   &:hover > ${MenuText} {
     text-decoration: underline;
   }
-`;
+`
 
 const MenuIcon = styled.img`
   width: 32px;
-`;
+`
 
 const MenuStyled = styled.nav`
   position: fixed;
@@ -71,4 +71,4 @@ const MenuStyled = styled.nav`
   overflow: auto;
   padding: 2.5rem;
   background-color: ${({ theme }) => theme.secondary.bg};
-`;
+`

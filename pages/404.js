@@ -1,6 +1,6 @@
-import Head from "next/head";
-import styled from "styled-components";
-import { ButtonBack, Headline, Paragraph } from "../components";
+import Head from 'next/head'
+import styled from 'styled-components'
+import { ButtonBack, Headline, Paragraph } from '../components'
 
 export default function NotFound() {
   return (
@@ -17,9 +17,9 @@ export default function NotFound() {
 
       <ButtonBack href="/">Volver al inicio</ButtonBack>
     </>
-  );
+  )
 }
 
 const NotFoundParagraph = styled(Paragraph)`
   margin-bottom: 1.25rem;
-`;
+`
